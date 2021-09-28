@@ -68,7 +68,7 @@ func main() {
 	i.Add(1)
 	Crawl("https://golang.org/", 4, fetcher)
 	i.Wait()
-	for k, _ := range m {
+	for k := range m {
 		fmt.Println(k)
 	}
 	fmt.Println("over")
