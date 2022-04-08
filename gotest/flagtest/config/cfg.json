@@ -1,0 +1,42 @@
+{
+  "server_id": 13,
+  "server_name": "金币场服",
+  "alert_addr": "https://oapi.dingtalk.com/robot/send?access_token=d704541da15263f41d13940e1f30be9eb42580a4512a47a8e551cecc2909aed0",
+  "copy_id": 1,
+  "debug_port": 8013,
+  "ws_config": {
+    "host": "0.0.0.0",
+    "port": 7013
+  },
+  "redis_config": {
+    "addr": "192.168.50.126:6379",
+    "pwd": "Lyx@2o21.RedIS-207"
+  },
+  "router_redis_config": {
+    "addr": "192.168.50.126:6379",
+    "pwd": "Lyx@2o21.RedIS-207"
+  },
+  "kafka_config": {
+    "consumer_server_list": [
+      "kafka2020_dev_1:9092",
+      "kafka2020_dev_2:9092",
+      "kafka2020_dev_3:9092"
+    ],
+    "producer_server_list": [
+      "kafka2020_dev_1:9092",
+      "kafka2020_dev_2:9092",
+      "kafka2020_dev_3:9092"
+    ]
+  },
+  "conf_group_list": [1, 2],
+  "custom_config": {
+    "fight_app_id": 1001,
+    "fight_app_key": "mhfghoc12fghbuu9xg4hjwe81vbfgh1f",
+    "fight_switch": 1,
+    "fight_paiset_url": "http://192.168.50.107:8899/desk/paiset",
+    "fight_report_url": "http://192.168.50.107:8899/fight/report",
+    "fight_match_url": "http://192.168.50.107:8899/fight/match",
+    "fight_match_mode_url": "http://192.168.50.107:8899/fight/match_mode"
+  },
+  "shushu_path":"/data/shushu_event"
+}
