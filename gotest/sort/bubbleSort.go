@@ -7,18 +7,20 @@ import (
 
 //冒泡排序 普通版
 func bubbleSort(s []int) {
-	fmt.Println("排序前:", s)
+	c := make([]int, len(s))
+	copy(c, s)
+	fmt.Println("排序前:", c)
 	//1.遍历切片
 	//2.比较切片内两个相邻的元素,如果s[i]>s[i+1],则交换位子，否者不变.
-	n := len(s)
+	n := len(c)
 	for i := 0; i < n-1; i++ {
 		for j := i + 1; j < n; j++ {
-			if s[i] > s[j] {
-				s[i], s[j] = s[j], s[i]
+			if c[i] > c[j] {
+				c[i], c[j] = c[j], c[i]
 			}
 		}
 	}
-	fmt.Println("排序后:", s)
+	fmt.Println("排序后:", c)
 }
 
 /*冒泡排序优化版
@@ -41,6 +43,5 @@ func bubbleSort2(s []int) {
 func main() {
 	arr := []int{3, 5, 7, 1, 6, 9, 84, 5, 4, 8, 6, 2}
 	bubbleSort(arr)
-	arr2 := []int{3, 5, 7, 1, 6, 9, 84, 5, 4, 8, 6, 2}
-	bubbleSort2(arr2)
+	bubbleSort2(arr)
 }
